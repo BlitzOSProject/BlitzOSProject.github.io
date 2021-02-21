@@ -1,0 +1,9 @@
+hello
+cat < fileA
+hello > fileC
+cat < fileC
+cat < fileC
+cat < fileB
+hello
+cat < fileA > fileC
+exit

@@ -1,0 +1,465 @@
+<html>
+
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>
+    BLITZ - What's New
+  </title>
+ </head>
+
+
+<body text="#000000" bgcolor="#999966">
+
+<h1>
+    What's New in the BLITZ System:
+<br>
+    A Chronological Log
+</h1>
+Back to the BLITZ Home Page: <A HREF="http://www.cs.pdx.edu/~harry/Blitz/index.html">www.cs.pdx.edu/~harry/Blitz/index.html</a><br>
+<br>
+
+
+<! ##################################################################################################### !>
+<! ##################################################################################################### !>
+<! ##################################################################################################### !>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Executables added for Ubuntu (64 bit)
+</h3>
+<i>
+    Posted: 6 October 2014
+</i>
+<br>
+<br>
+A new directory containing executables for the BLITZ tools was added.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+
+<hr>
+<h3>
+    Sleeping Barbers Task: More Documentation Added
+</h3>
+<i>
+    Posted: 1 October 2009
+</i>
+<br>
+<br>
+Previously, project 3 relied on the second edition of the Tanenbaum textbook, which described the Sleeping Barber task and gave a solution in C.  The project goal is to translate the solution from C to KPL.  This change adds a file called SleepingBarberProblem [.pdf .htm .doc] to the p3 directory, to describe the problem and give the C solution.  This was done to eliminate the dependency on this particular textbook.  The project document was also updated to point students to this new file.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor fix to p6/Switch.s
+</h3>
+<i>
+    Posted: 2 June 2009
+</i>
+<br>
+<br>
+The file "Switch.s" should be identical in directories p4, p5, p6, p7, and p8.  Directory p6 contained an old version.  If used, it would have resulted in compile errors about "ThreadStart" and "ThreadStartMain" being undefined.  The file has been replaced with the correct version. 
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Added JoinTest4 to Project 6 test suite
+</h3>
+<i>
+    Posted: 2 June 2009
+</i>
+<br>
+<br>
+The file "p6/TestProgram3.c" has been updated to add an additional test, which is called "JoinTest4".  A copy of the file TestProgram3.c also exists
+in directories p7 and p8.  The project 6
+assignment has also been updated accordingly. 
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor change to Mutex implementation
+</h3>
+<i>
+    Posted: 2 April 2009
+</i>
+<br>
+<br>
+The previous implementation of Mutex.Unlock woke a waiting thread, which then competed
+in a loop to acquire the lock.  This suffered from a possibility of starvation and had
+the practical effect that one thread tended to monopolize a lock.  The revised
+implementation of Mutex.Unlock transfers the lock to whichever thread has been waiting longest.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Windows support added
+</h3>
+<i>
+    Posted: 25 March 2009
+</i>
+<br>
+<br>
+BLITZ can be used under Windows, in addition to Unix, Linux, and Mac.  A new document has been added to the Project 1 directory to describe how to set BLITZ up on a Windows machine.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    The Thread Start-Up code was rewritten and simplified
+</h3>
+<i>
+    Posted: 25 March 2009
+</i>
+<br>
+<br>
+The following fields were added to class Thread: "initialFunction", "initialArgument".  In short, a pointer to the thread's "main" function is now passed in a field of the Thread object, instead of in a register, which was hard to follow.
+<br>
+<br>
+The assembly routine ThreadStartUp was greatly simplified.  The function ThreadStartMain was added to Thread.c, replacing the function ThreadStart.  Several documents and code files were updated in connection with this, particularly the paper on the Thread Scheduler.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor fix to p2/Main.h
+</h3>
+<i>
+    Posted: 25 March 2009
+</i>
+<br>
+<br>
+The USES clause said "SynchStarter", and is changed to "Synch".
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Modification to makefile
+</h3>
+<i>
+    Posted: 1 October 2008
+</i>
+<br>
+<br>
+The files ".../Blitz/BlitzSrc/makefile" and ".../Blitz/BlitzSrc/makefile-Solaris" have been updated.  A comment was added to these files regarding compiling on 64-bit machines using the "-m32" gcc option.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Revision of the Thread Scheduler paper
+</h3>
+<i>
+    Posted: 19 August 2008
+</i>
+<br>
+<br>
+Edited this document, with minor additions, clarifications, and re-wordings.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor change to emulator
+</h3>
+<i>
+    Posted: 3 December 2007
+</i>
+<br>
+<br>
+Modified the emulator (blitz.c) to handle EOF slightly differently, to fix a discrepancy on different host systems.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor change to Project 8 assignment
+</h3>
+<i>
+    Posted: 28 November 2007
+</i>
+<br>
+<br>
+A few words were added to elaborate on how EOF / Control-D must be handled by the Read syscall.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    A document describing the thread scheduler code was created
+</h3>
+<i>
+    Posted: 8 October 2007
+</i>
+<br>
+<br>
+A document called "The Thread Scheduler and Concurrency Control Primitives" (37 pages) was created and added to the documentation suite.  This document is basically a code walk-through of the BLITZ thread scheduler. Familiarity with the BLITZ system is not assumed and is not needed to understand this document. This document is not required by students working on the BLITZ kernel project, but it may be helpful to those working on projects 2 and 3.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    A document describing the Assembler was created
+</h3>
+<i>
+    Posted: 26 September 2007
+</i>
+<br>
+<br>
+A document called "The BLITZ Assembler" was created and added to the documentation suite.  This document is not needed by students or instructors, but may be of interest to anyone writing BLITZ assembler code.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    BLITZ Version 2.0 Released
+</h3>
+<i>
+    Posted: 19 September 2007
+</i>
+<br>
+<br>
+A complete set of updated files was posted to the BLITZ website.  The current version is now 2.0 and the previous version will be known as version 1.0.
+A link was added to the home page so that previous versions of the website and the older files may still be accessed.
+<br>
+<br>
+The primary change is that support for Little Endian architectures (e.g., Linux, PCs) is added.  Also, the Semaphore operation names have been changed from "Signal" and "Wait" to "Up" and "Down".  See the remainder of this log for details concerning other modifications.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Project grading policy added to project 4 document
+</h3>
+<i>
+    Posted: 18 September 2007
+</i>
+<br>
+<br>
+A section titled "Policy Concerning Project Deadlines" was added to the Project 4 assignment document.  In summary, it says "If you can't pass our test data, then keep working on this project until it works 100% correctly.  Only then can you move on to the next project.  Grades will be based not on whether your code works, but on how many of the projects you were able to complete before the end of the course.  See instructor for details / alterations of this policy."
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Names of semaphore operations changed
+</h3>
+<i>
+    Posted: 17 September 2007
+</i>
+<br>
+<br>
+Previously, the primary methods for class "Semaphore" were named "Signal" and "Wait".  These methods have been renamed to "Up" and "Down", which are more common names for the familiar V and P operations.  The previous names were identical to the names of methods in class "Condition", which was an additional source of confusion.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Change of variable names in project 8
+</h3>
+<i>
+    Posted: 17 September 2007
+</i>
+<br>
+<br>
+The names of "inBuffer" and "outBuffer" have been changed to "getBuffer" and "putBuffer", to reduce the confusion with the associated variables, which formerly had the names
+"inBufferNextIn", "inBufferNextOut", "outBufferNextIn", and "outBufferNextOut".
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Minor problem in p5/TestProgram1.c fixed
+</h3>
+<i>
+    Posted: 6 September 2007
+</i>
+<br>
+<br>
+TestProgram1.c displays the desired output to make checking the program's behavior easier.  The message "virt addr of buffer = 0x0000B0A8" was corrected to "virt addr of buffer = 0x0000B0B0".
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    Cross-platform incompatibilities fixed
+</h3>
+<i>
+    Posted: 5 September 2007
+</i>
+<br>
+<br>
+    There were several things that made it difficult to compile the Blitz Tools on different systems, and these were fixed.  The file blitz.c contained some multi-character constants, which generated warnings.  The file blitz.c also had an extraneous space in "printf (...%11 d...);"  The file diskUtil.c had a couple of mispellings of "printf" as "print".  Some of the files contained CR characters at the end-of-line, rather than the Unix standard LF character.  The makefile was updated.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+<hr>
+<h3>
+    Project 1 changed to discuss additional hosts
+</h3>
+<i>
+    Posted: 5 September 2007
+</i>
+<br>
+<br>
+The project 1 document was revised to discuss loading the Blitz Tools on other platforms, <br>
+<br>
+<! ##################################################################################################### !>
+
+
+<hr>
+<h3>
+    Support for Little Endian machines (e.g., Linux) was added
+</h3>
+<i>
+    Posted: 5 September 2007
+</i>
+<br>
+<br>
+A major revision to the Blitz tools now supports both Big and Little Endian platforms.
+See the makefile in BlitzTools for more info.  Previously the KPL compiler source code was kept within a subdirectory in BlitzTools; this structure has been flattened and all source code is now within the BlitzTools directory.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+<hr>
+<h3>
+    Minor compiler bug fixed
+</h3>
+<i>
+    Posted: 5 September 2007
+</i>
+<br>
+<br>
+A Compiler Logic Error was generated when a constant was equated to an expression that could not be evaluated at compile-time.  At a later stage (after constant expressions have been evaluated), when the constant is used, we look at the definition and grab the constant value.  Previously the compiler checked to make sure the value was good and generated a logic error if not.  This has been changed to generate an normal (redundant)error.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+
+<hr>
+<h3>
+    Minor problems fixed
+</h3>
+<i>
+    Posted: 9 May 2007
+</i>
+<br>
+<br>
+    The following file was updated: p5/FileStuff.c (changed error message).
+<br>
+    The following file was updated: p4/DISK (The older version caused a Magic Number error).
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+<hr>
+<h3>
+    The "What's New" log added
+</h3>
+<i>
+    Posted: 8 May 2007
+</i>
+<br>
+<br>
+    This log was created.
+<br>
+<br>
+<! ##################################################################################################### !>
+
+
+
+
+<hr>
+  <h2>
+    About the Author
+  </h2>
+Harry H. Porter III, Ph.D.
+<br>
+Computer Science Department
+<br>
+Portland State University
+<br>
+<br>
+Short Bio:
+<A HREF="ShortBio.html">click here</A><br>
+Harry's Website: <A HREF="http://www.cs.pdx.edu/~harry">www.cs.pdx.edu/~harry</a><br>
+Email: <a href="mailto:harry@cs.pdx.edu">harry@cs.pdx.edu</a>
+<br>
+<br>
+
+<hr>
+
+
+</html>
