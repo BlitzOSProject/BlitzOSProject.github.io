@@ -1,13 +1,11 @@
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
-
 </style>
 
 <div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.5em" markdown="1">
 
-### تمرین سری اول درس سیستم‌عامل
-#### مهلت ارسال: ۱۷ اسفند
+## تمرین سری اول درس سیستم‌عامل
+### مهلت ارسال: ۱۷ اسفند
 
 <hr>
 
@@ -18,7 +16,7 @@
 <div dir="ltr">
 
 ```
-script <std_number>
+script <file_name>
 ```
 </div>
 

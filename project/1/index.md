@@ -8,7 +8,7 @@ In this course you will be creating an operating system kernel. You’ll be usin
 
 ### Step 1: Read the Overview Document
 
-Read the first document ([An Overview of the BLITZ System]({{ site.url }}/docs/overview)) before proceeding to next step.
+Read the first document ([An Overview of the BLITZ System](/docs/overview)) before proceeding to next step.
 
 ### Step 3: Choose Your Host Platform
 
