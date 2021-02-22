@@ -63,35 +63,35 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 
 ## The Operating System Project
 
-### Project 1: Introduction to the BLITZ Tools
-[html](OSProject/p1/proj1.htm) [files](OSProject/p1)
+### [Project 1: Introduction to the BLITZ Tools](project/1)
+[files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p1)
 ### Project 2: Threads and Interprocess Communication
-[html](OSProject/p2/proj2.htm) [files](OSProject/p2)
+[html](OSProject/p2/proj2.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p2)
 ### Project 3: Barbers and Gamblers
-[html](OSProject/p3/proj3.htm) [files](OSProject/p3)
+[html](OSProject/p3/proj3.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p3)
 ### Project 4: Kernel Resource Management
-[html](OSProject/p4/proj4.htm) [files](OSProject/p4)
+[html](OSProject/p4/proj4.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p4)
 ### Project 5: User-Level Processes
-[html](OSProject/p5/proj5.htm) [files](OSProject/p5)
+[html](OSProject/p5/proj5.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p5)
 ### Project 6: Multiprogramming with Fork
-[html](OSProject/p6/proj6.htm) [files](OSProject/p6)
+[html](OSProject/p6/proj6.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p6)
 ### Project 7: File-Related Syscalls
-[html](OSProject/p7/proj7.htm) [files](OSProject/p7)
+[html](OSProject/p7/proj7.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p7)
 ### Project 8: The Serial I/O Device Driver
-[html](OSProject/p8/proj8.htm) [files](OSProject/p8)
+[html](OSProject/p8/proj8.htm) [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p8)
 
 ## The BLITZ Tools
 
 ### Executables for Sun / Solaris
-[Blitz/BlitzBin/Sun](BlitzBin/Sun)
+[Blitz/BlitzBin/Sun](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/Sun)
 ### Executables for Linux Ubuntu (64-bit)
-[Blitz/BlitzBin/Ubuntu64](BlitzBin/Ubuntu64)
+[Blitz/BlitzBin/Ubuntu64](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/Ubuntu64)
 ### Executables for Mac OS X (Intel)
-[Blitz/BlitzBin/MacIntel](BlitzBin/MacIntel)
+[Blitz/BlitzBin/MacIntel](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/MacIntel)
 ### Executables for Mac OS X (PPC)
-[Blitz/BlitzBin/MacPPC](BlitzBin/MacPPC)
+[Blitz/BlitzBin/MacPPC](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/MacPPC)
 ### Source Code
-[Blitz/BlitzSrc](BlitzSrc)
+[Blitz/BlitzSrc](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzSrc)
 
 ## Information for Instructors
 
