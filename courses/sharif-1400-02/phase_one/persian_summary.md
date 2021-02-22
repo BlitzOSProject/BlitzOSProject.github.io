@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 </style>
 
-<div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.5em" markdown="1">
+<div dir="rtl" style="font-family: 'Lateef', -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', cursive;font-size:1.2em" markdown="1">
 
 ## تمرین سری اول درس سیستم‌عامل
 ### مهلت ارسال: ۱۷ اسفند
@@ -13,15 +13,15 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp; در آخر همانطور که در قسمت What to hand in توضیحات گفته شده است, قبل از شروع step 7 ابتدا با زدن دستور زیر یک فایل اسکریپت ایجاد کنید. نام فایل را شماره دانشجویی خود قرار دهید.
 
-<div dir="ltr">
+<div dir="ltr" markdown="1">
 
 ```
 script <file_name>
 ```
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; سپس تمامی مراحل خواسته شده در step 7 الی step 11 را انجام دهید. پس از اتمام step 11 دستور ``` exit ``` را بزنید و در نهایت فایل اسکریپت ذخیره شده را در سامانه cw آپلود کنید.
-دقت کنید بعد از ایجاد فایل اسکریپت و قبل از زدن دستور ```exit``` تمامی دستوراتی که در ترمینال وارد می‌کنید در فایل اسکریپت ذخیره میشوند. پس لطفاً در این مدت تنها دستوراتی که در فایل توضیحات از شما خواسته شده است را در ترمینال خود وارد کنید!
+&nbsp;&nbsp;&nbsp;&nbsp; سپس تمامی مراحل خواسته شده در step 7 الی step 11 را انجام دهید. پس از اتمام step 11 دستور `exit` را بزنید و در نهایت فایل اسکریپت ذخیره شده را در سامانه cw آپلود کنید.
+دقت کنید بعد از ایجاد فایل اسکریپت و قبل از زدن دستور `exit` تمامی دستوراتی که در ترمینال وارد می‌کنید در فایل اسکریپت ذخیره میشوند. پس لطفاً در این مدت تنها دستوراتی که در فایل توضیحات از شما خواسته شده است را در ترمینال خود وارد کنید!
 
 <br>
 
