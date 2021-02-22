@@ -41,7 +41,7 @@
 #   cc (GCC) 4.0.3 (Ubuntu 4.0.3-1ubuntu5), with the multi-char warnings.
 #
 CC=cc
-CFLAGS=-g -lm -DBLITZ_HOST_IS_LITTLE_ENDIAN
+CFLAGS=-g -lm -DBLITZ_HOST_IS_LITTLE_ENDIAN -Wreturn-type
 CPLUSPLUS=g++
 CPLUSPLUSFLAGS=-g -DBLITZ_HOST_IS_LITTLE_ENDIAN
 LINKFLAGS=
@@ -100,28 +100,28 @@ LINKFLAGS=
 all: asm dumpObj lddd blitz diskUtil hexdump check endian kpl
 
 asm: asm.c
-	$(CC) $(CFLAGS) asm.c -o asm
+	$(CC) asm.c -o asm $(CFLAGS) 
 
 lddd: lddd.c
-	$(CC) $(CFLAGS) lddd.c -o lddd
+	$(CC) lddd.c -o lddd $(CFLAGS) 
 
 blitz: blitz.c
-	$(CC) $(CFLAGS) blitz.c -o blitz
+	$(CC) blitz.c -o blitz $(CFLAGS) 
 
 dumpObj: dumpObj.c
-	$(CC) $(CFLAGS) dumpObj.c -o dumpObj
+	$(CC) dumpObj.c -o dumpObj $(CFLAGS)
 
 diskUtil: diskUtil.c
-	$(CC) $(CFLAGS) diskUtil.c -o diskUtil
+	$(CC) diskUtil.c -o diskUtil $(CFLAGS)
 
 hexdump: hexdump.c
-	$(CC) $(CFLAGS) hexdump.c -o hexdump
+	$(CC) hexdump.c -o hexdump $(CFLAGS)
 
 check: check.c
-	$(CC) $(CFLAGS) check.c -o check
+	$(CC) check.c -o check $(CFLAGS)
 
 endian: endian.c
-	$(CC) $(CFLAGS) endian.c -o endian
+	$(CC) endian.c -o endian $(CFLAGS)
 
 kpl:	main.o lexer.o ast.o printAst.o parser.o mapping.o check.o ir.o gen.o
 	$(CPLUSPLUS) $(CPLUSPLUSFLAGS) $(LINKFLAGS)\
@@ -155,3 +155,5 @@ ir.o: ir.cc main.h ast.h ir.h
 gen.o: gen.cc main.h ast.h ir.h
 	$(CPLUSPLUS) $(CPLUSPLUSFLAGS) -c gen.cc
 
+clean:
+	rm -f gen.o ir.o check.o mapping.o parser.o printAst.o ast.o lexer.o main.o asm dumpObj lddd blitz diskUtil hexdump check endian kpl

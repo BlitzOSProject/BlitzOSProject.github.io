@@ -2795,7 +2795,7 @@ int roundUpToPrime (int i) {
   if (i <= 30011) return 30011;
 
   programLogicError ("IMPLEMENTATION RESTRICTION: More than 30,000 cases encountered in some switch statement");
-
+  return 0;
 }
 
 
@@ -3896,6 +3896,7 @@ VarDecl * genConstructor (Constructor * constructor, VarDecl * target) {
       printf ("\nconstructor->allocKind = %s\n", symbolName (constructor->allocKind));
       programLogicError ("Unexpected allocKind in genConstructor");
   }
+  return NULL;
 }
 
 

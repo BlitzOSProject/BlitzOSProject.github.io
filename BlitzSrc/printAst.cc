@@ -26,7 +26,7 @@
 //
 
 #include "main.h"
-
+#include <stdint.h>
 
 
 #define TABAMT 2
@@ -1212,7 +1212,7 @@ int printPtr (AstNode * p) {
 
   static int a [MAX_LABELS];
   static int nextLabel = 1;
-  int p1 = (int) p;
+  intptr_t p1 = (intptr_t) p;
   int i;
   if (p == NULL) {
     printf ("NULL");

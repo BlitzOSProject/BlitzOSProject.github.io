@@ -21,7 +21,7 @@
 //
 
 #include "main.h"
-
+#include <stdint.h>
 
 
 
@@ -793,7 +793,7 @@ int Mapping<Key, Value> :: arrayIndex (Key * k) {
     printf ("sizeOfArray = %d\n", sizeOfArray);
     // fatalError ("In Mapping...sizeOfArray <= 0");
   }
-  return (((int) k) >> 2) % sizeOfArray;
+  return (((intptr_t) k) >> 2) % sizeOfArray;
 }
 
 

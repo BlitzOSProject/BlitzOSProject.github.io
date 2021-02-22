@@ -34,7 +34,7 @@
 #include <signal.h>
 #include <math.h>
 #include <errno.h>
-
+#include <stdint.h>
 
 
 /* SWAP_BYTES (int)  -->  int
@@ -4188,7 +4188,8 @@ void commandFloatReg (int reg) {
 ** contents as floating point numbers.
 */
 void commandFMem () {
-  int i, count, index, implAddr, physAddr, from, to;
+  int i, count, index, physAddr, from;
+  intptr_t implAddr, to;
   double d;
   TableEntry * tableEntry;
 
@@ -4211,8 +4212,8 @@ void commandFMem () {
     }
 
     /* Fetch the data. */
-    implAddr = ((int) memory) + physAddr;
-    to = (int) & d;
+    implAddr = ((intptr_t) memory) + physAddr;
+    to = (intptr_t) & d;
 #ifdef BLITZ_HOST_IS_LITTLE_ENDIAN
     * (int *) (to + 0) = SWAP_BYTES (* (int *) (implAddr+4));
     * (int *) (to + 4) = SWAP_BYTES (* (int *) (implAddr+0));
@@ -4294,7 +4295,8 @@ void commandDis2 () {
 ** and returns.
 */
 void disassemble (int physAddr) {
-  int opcode, opcode2, cat, n, index, implAddr, instr, instr2, i1, i2;
+  int opcode, opcode2, cat, n, index, instr, instr2, i1, i2;
+  intptr_t implAddr;
   TableEntry * tableEntry;
   char c;
 
@@ -4448,7 +4450,7 @@ xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx,
   }
 
   /* Fetch the instruction. */
-  implAddr = ((int) memory) + physAddr;
+  implAddr = ((intptr_t) memory) + physAddr;
   instr = SWAP_BYTES (* (int *) implAddr);
 
   /* Print out the label(s) if any. */
@@ -4567,7 +4569,7 @@ xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx,
       printRc (instr);
       /* Fetch the next instruction. */
       if (physicalAddressOk (physAddr+4)) {
-        implAddr = ((int) memory) + physAddr + 4;
+        implAddr = ((intptr_t) memory) + physAddr + 4;
         instr2 = SWAP_BYTES (* (int *) implAddr);
         opcode2 = (instr2 >> 24) & 0x000000ff;
       } else {
@@ -7142,7 +7144,7 @@ int isAligned (int addr) {
 ** the I/O subsystem.
 */
 int getPhysicalWord (int physAddr) {
-  int implAddr;
+  intptr_t implAddr;
   if (!physicalAddressOk (physAddr)) {
     fatalError ("PROGRAM LOGIC ERROR: Invalid address in getPhysicalWord");
   }
@@ -7153,7 +7155,7 @@ int getPhysicalWord (int physAddr) {
   if (inMemoryMappedArea (physAddr)) {
     return getMemoryMappedWord (physAddr);
   } else {
-    implAddr = ((int) memory) + physAddr;
+    implAddr = ((intptr_t) memory) + physAddr;
     return SWAP_BYTES (* (int *) implAddr);
   }
 }
@@ -7183,7 +7185,7 @@ int getPhysicalWordAndLock (int physAddr) {
 ** the I/O subsystem.
 */
 void putPhysicalWord (int physAddr, int value) {
-  int implAddr;
+  intptr_t implAddr;
   if (!physicalAddressOk (physAddr)) {
     fatalError ("PROGRAM LOGIC ERROR: Invalid address in putPhysicalWord");
   }
@@ -7194,7 +7196,7 @@ void putPhysicalWord (int physAddr, int value) {
   if (inMemoryMappedArea (physAddr)) {
     putMemoryMappedWord (physAddr, value);
   } else {
-    implAddr = ((int) memory) + physAddr;
+    implAddr = ((intptr_t) memory) + physAddr;
     * (int *) implAddr = SWAP_BYTES (value);
   }
 }
@@ -9192,7 +9194,7 @@ void performDiskIO (int command) {
 
     /* Read in N sectors of data... */
     errno = 0;
-    fread ( (void *) (((int) memory) + diskBufferLow),
+    fread ( (void *) (((intptr_t) memory) + diskBufferLow),
             PAGE_SIZE, diskSectorCountRegister, diskFile );
     if (errno) {
       fprintf (stderr, "\n\rError from host OS during DISK read; Disk I/O has been disabled!\n\r");
@@ -9210,7 +9212,7 @@ void performDiskIO (int command) {
 
     /* Write in N sectors of data... */
     errno = 0;
-    fwrite ( (void *) (((int) memory) + diskBufferLow),
+    fwrite ( (void *) (((intptr_t) memory) + diskBufferLow),
             PAGE_SIZE, diskSectorCountRegister, diskFile );
     if (errno) {
       fprintf (stderr, "\n\rError from host OS during DISK write; Disk I/O has been disabled!\n\r");

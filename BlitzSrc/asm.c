@@ -4304,7 +4304,7 @@ int getLC () {
       return bssLC;
     default:
       printError ("Not currently in a .text, .data, or .bss segment");
-      return;
+      return 0;
   }
 }
 

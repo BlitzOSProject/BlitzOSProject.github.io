@@ -1,6 +1,6 @@
 /* The BLITZ Linker
 **
-** Copyright 2000-2007, Harry H. Porter III
+** Copyright 2000-2021, Harry H. Porter III
 **
 ** This file may be freely copied, modified and compiled, on the sole
 ** conditions that if you modify it...
@@ -15,6 +15,7 @@
 ** Modifcations by:
 **   03/15/06 - Harry H. Porter III
 **   04/27/07 - Harry H. Porter III - Support for little endian added
+**   02/08/21 - AliReza Tofighi Mohammadi - Support 64bit operating systems
 **
 */
 
@@ -22,7 +23,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-
+#include <stdint.h>
 
 /* SWAP_BYTES (int)  -->  int
 **
@@ -1016,13 +1017,14 @@ void printHelp () {
 "=====                    =====\n"
 "==============================\n"
 "\n"
-"Copyright 2000-2007, Harry H. Porter III\n"
+"Copyright 2000-2021, Harry H. Porter III\n"
 "========================================\n"
 "  Original Author:\n"
 "    12/29/00 - Harry H. Porter III\n"
 "  Modifcations by:\n"
 "    03/15/06 - Harry H. Porter III\n"
 "    04/27/07 - Harry H. Porter III - Support for little endian added\n"
+"    02/08/21 - AliReza Tofighi Mohammadi - Support for 64bit operating systems\n"
 "\n"
 "Command Line Options\n"
 "====================\n"
@@ -1108,7 +1110,7 @@ void printMemory (char * ptr, int n) {
    int addr;
    pmCount = n;
    pmPtr = ptr;
-   addr = (int) ptr;
+   addr = (intptr_t) ptr;
 
    /* Each execution of this loop prints a single output line. */
    get16Bytes ();
@@ -1519,9 +1521,9 @@ void performRelocations () {
       printRelocationHeader ();
     }
 
+
     /* Each iteration of this loop looks at another relocation action. */
     for (rel=file->relocList; rel!=NULL; rel=rel->next) {
-
       /* Print the relocation record */
       printRelocationRecord (rel);
 
@@ -1531,14 +1533,14 @@ void performRelocations () {
                          rel->locationToUpdate
                           + file->textAddr
                           - textStartAddr
-                          + (int) textSegment
+                          + (intptr_t) textSegment
                        );
       } else if (rel->inText == 2) {
         ptr = (char *) (
                          rel->locationToUpdate
                           + file->dataAddr
                           - dataStartAddr
-                          + (int) dataSegment
+                          + (intptr_t) dataSegment
                        );
       }
       if (rel->type == 1) {  /* 8-bits */

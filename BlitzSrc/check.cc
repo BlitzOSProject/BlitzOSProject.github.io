@@ -1556,6 +1556,7 @@ Type * findCoreType (Type * typ) {
       t->positionAt (typ);
       return t;
   }
+  return NULL;
 }
 
 
@@ -4233,6 +4234,7 @@ AstNode * getTypeDef (Type * type) {
       printf ("\ndef->op = %s\n", symbolName (def->op));
       programLogicError ("Unexpected op in getTypeDef");
   }
+  return NULL;
 }
 
 
@@ -5715,6 +5717,8 @@ AstNode * evalExprsIn (AstNode * node) {
       printf ("node->op = %s\n", symbolName (node->op));
       programLogicError ("Unkown op in evalExprsIn");
   }
+
+  return NULL;
 }
 
 
@@ -6119,7 +6123,7 @@ int typesEqual (Type * t1, Type * t2) {
       printf ("t2->op = %s\n", symbolName (t2->op));
       programLogicError ("Unknown op in typesEqual");
   }
-
+  return 0;
 }
 
 
@@ -6491,7 +6495,7 @@ int isSubType (Type * t1, Type * t2) {
       printf ("t2->op = %s\n", symbolName (t2->op));
       programLogicError ("Unknown op in isSubType");
   }
-
+  return 0;
 }
 
 
@@ -6701,7 +6705,7 @@ int assignable (Type * t1, Type * t2) {
       printf ("t2->op = %s\n", symbolName (t2->op));
       programLogicError ("Unknown op in assignable");
   }
-
+  return 0;
 }
 
 
@@ -9127,6 +9131,7 @@ a catch stmt; we just keep going and hit other stuff in the list.
       programLogicError ("Unkown op in checkTypes");
   }
   programLogicError ("All cases should contain returns in checkTypes");
+  return NULL;
 }
 
 
@@ -11237,6 +11242,7 @@ Type * resolveNamedType (Type * type) {
       printf ("\ndef->op = %s\n", symbolName (def->op));
       programLogicError ("Unexpected myDef->op in resolveNamedType");
   }
+  return NULL;
 }
 
 
@@ -11274,6 +11280,7 @@ Type * resolveNamedType2 (Type * type) {
       programLogicError ("Unexpected myDef->op in resolveNamedType2");
 
   }
+  return NULL;
 }
 
 
@@ -12120,6 +12127,7 @@ int fallsThru (AstNode * node) {
       printf ("node->op = %s\n", symbolName (node->op));
       programLogicError ("Unkown op in fallsThru");
   }
+  return 0;
 }
 
 

@@ -168,7 +168,7 @@ Class * currentClass;
 //
 // The compiler main.
 //
-main (int argc, char ** argv) {
+int main (int argc, char ** argv) {
   Expression * expr;
   Header * hdr, * newHeader;
   Uses * uses;
