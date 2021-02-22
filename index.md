@@ -1,8 +1,29 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+</style>
+
+
 ![The BLITZ Home Page - LOGO](logo.jpg)  
 
 ## Overview
 
 The BLITZ System is a collection of software designed to support a university-level course on Operating Systems. Over the course of one or two terms, students will implement a small, but complete, operating system kernel. The BLITZ software provides the framework for these student projects.
+
+## Courses
+
+<div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.2em" markdown="1">
+
+
+### دانشگاه صنعتی شریف - بهار ۱۴۰۰ - سیستم عامل
+
+#### [فاز نخست پروژه](courses/sharif-1400-02/1)
+ - **توضیحات:** [اینجا](courses/sharif-1400-02/1)
+ - **تاریخ انتشار:** ۵ اسفند ۱۳۹۹
+ - **ویدئو‌ی کلاس حل تمرین:** بزودی
+ - **مهلت تحویل**: یک هفته
+
+
+</div>
 
 ## Documentation
 
