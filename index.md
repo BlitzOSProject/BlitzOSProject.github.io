@@ -14,10 +14,10 @@ The BLITZ System is a collection of software designed to support a university-le
 <div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.2em" markdown="1">
 
 
-### دانشگاه صنعتی شریف - بهار ۱۴۰۰ - سیستم عامل
+### دانشگاه صنعتی شریف - بهار ۱۴۰۰ - سیستم عامل - دکتر فروغمند
 
 #### فاز نخست پروژه
- - **توضیحات:** [اینجا](courses/sharif-1400-02/phase_one/persian_summary.md)
+ - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-one/persian-summary)
  - **تاریخ انتشار:** ۵ اسفند ۱۳۹۹
  - **ویدئو‌ی کلاس حل تمرین:** بزودی
  - **مهلت تحویل**: یک هفته
