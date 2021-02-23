@@ -602,4 +602,4 @@ PLEASE STAPLE ALL PAGES!
 
 ### Grading for this Project
 
-You should fimillar with KPL language and also compiled successfully BlitzTools for this project.
+You should get familiar with KPL language and compile  BlitzTools successfully for this project.
