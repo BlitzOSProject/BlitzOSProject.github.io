@@ -182,6 +182,18 @@ int getToken (void) {
       incrLineNumber ();
       continue;
 
+    // Process CRLF newline
+    } else if (ch == '\r') {
+      ch = getNextChar();
+      if (ch == '\n') {
+        incrLineNumber ();
+        continue;
+      }
+      else {
+        sprintf (lexError2, "Illegal character 0x%02x ignored", ch);
+        lexError (lexError2);
+      }
+
     // Process other white space...
     } else if (ch == ' ' || ch == '\t') {
       // do nothing
