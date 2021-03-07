@@ -19,7 +19,7 @@ The BLITZ System is a collection of software designed to support a university-le
 #### فاز نخست پروژه
  - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-one/persian-summary)
  - **تاریخ انتشار:** ۵ اسفند ۱۳۹۹
- - **ویدئو‌ی کلاس حل تمرین:** بزودی
+ - **ویدئو‌ی کلاس حل تمرین:** [اینجا](https://aparat.com/v/gy8MD)
  - **مهلت تحویل**: یک هفته
 
 #### فاز دوم پروژه
