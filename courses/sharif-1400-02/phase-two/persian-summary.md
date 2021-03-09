@@ -38,6 +38,13 @@ Main.c
 PUT YOUR NAME HERE
 در ابتدای کدها بنویسید.
 
+خروجی مطلوب برای ۳ مرحله‌ی ۵ و ۶ و ۷ به ترتیب در 
+[اینجا](/OSProject/p2/DesiredOutput1.pdf)
+،
+[اینجا](/OSProject/p2/DesiredOutput2.pdf)
+و
+[اینجا](/OSProject/p2/DesiredOutput3.pdf)
+قرار گرفته است.
 
 همچنین، اگر هنوز توضیحات زبان
 KPL
