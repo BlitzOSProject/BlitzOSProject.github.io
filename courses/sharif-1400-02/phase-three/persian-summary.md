@@ -5,7 +5,7 @@
 <div dir="rtl" style="font-family: 'Lateef', -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', cursive;font-size:1.2em" markdown="1">
 
 ## تمرین سری سوم درس سیستم‌عامل
-### مهلت ارسال: ۱۰ اردیبهشت
+### مهلت ارسال: ۴ اردیبهشت
 
 ----
 
