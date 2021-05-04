@@ -7952,7 +7952,7 @@ Type * checkTypes (AstNode * node) {
       // Next, check to make sure we have no duplicate values.
       // Create a hash table of ptrs to CASE nodes.
       arSize = numberOfCases * 2 + 1;    // Make it twice as big & at least 1.
-      caseArray = (Case * *) calloc (4, arSize);
+      caseArray = (Case * *) calloc (sizeof(Case *), arSize);
       for (cas = switchStmt->caseList; cas; cas = cas->next) {
         i = cas->ivalue;
         if (i<0) {

@@ -330,8 +330,8 @@ main (int argc, char ** argv) {
     if (commandOptionL) {
       printf (" Allocating memory for text and data segments...\n");
     }
-    textSegment = (char *) calloc (totalTextSize, 1);
-    dataSegment = (char *) calloc (totalDataSize, 1);
+    textSegment = (char *) calloc (totalTextSize, sizeof(char));
+    dataSegment = (char *) calloc (totalDataSize, sizeof(char));
     if ((textSegment == NULL) || (dataSegment == NULL)) {
       fatalError ("Calloc failed - insufficient memory available");
     }

@@ -618,12 +618,12 @@ void processCommandLine (int argc, char ** argv) {
       if ((len > 2)
             && (commandInFileName [len-2] == '.')
             && (commandInFileName [len-1] == 's')) {
-        commandOutFileName = (char *) calloc (1, strlen(commandInFileName) + 1);
+        commandOutFileName = (char *) calloc (sizeof (char), strlen(commandInFileName) + 1);
         strcpy (commandOutFileName, commandInFileName);
         commandOutFileName [len-2] = '.';
         commandOutFileName [len-1] = 'o';
       } else {
-        commandOutFileName = (char *) calloc (1, strlen(commandInFileName) + 3);
+        commandOutFileName = (char *) calloc (sizeof (char), strlen(commandInFileName) + 3);
         strcpy (commandOutFileName, commandInFileName);
         commandOutFileName [len] = '.';
         commandOutFileName [len+1] = 'o';
