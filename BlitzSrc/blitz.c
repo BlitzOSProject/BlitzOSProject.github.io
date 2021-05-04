@@ -3965,7 +3965,7 @@ void resetState () {
   }
 
   /* Allocate a chunk of memory which will hold the BLITZ machine memory. */
-  memory = (char *) calloc (1, MEMORY_SIZE);
+  memory = (char *) calloc (sizeof (char), MEMORY_SIZE);
   fflush (stdout);
   if (memory == 0) {
     fatalError ("Calloc failed - insufficient memory available");

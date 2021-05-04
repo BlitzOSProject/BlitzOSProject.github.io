@@ -356,7 +356,7 @@ int main (int argc, char ** argv) {
 
         // Figure out the name of the .h header file...
         len = strlen (newPackName->chars);
-        fileName = (char *) calloc (1, len + 4);
+        fileName = (char *) calloc (sizeof (char), len + 4);
         strcpy (fileName, newPackName->chars);
         fileName [len] = '.';
         fileName [len+1] = 'h';
@@ -1243,7 +1243,7 @@ void processCommandLine (int argc, char ** argv) {
   // Figure out the name of the .h header file.
   if (commandPackageName != NULL) {
     len = strlen (commandPackageName);
-    headerFileName = (char *) calloc (1, len + 4);
+    headerFileName = (char *) calloc (sizeof (char), len + 4);
     strcpy (headerFileName, commandPackageName);
     headerFileName [len] = '.';
     headerFileName [len+1] = 'h';
@@ -1252,7 +1252,7 @@ void processCommandLine (int argc, char ** argv) {
 
   // Figure out the name of the .c code file.
   if (commandPackageName != NULL) {
-    codeFileName = (char *) calloc (1, len + 4);
+    codeFileName = (char *) calloc (sizeof (char), len + 4);
     strcpy (codeFileName, commandPackageName);
     codeFileName [len] = '.';
     codeFileName [len+1] = 'c';
@@ -1262,7 +1262,7 @@ void processCommandLine (int argc, char ** argv) {
   // Figure out the name of the .s output file.
   if (outputFileName == NULL) {
     if (commandPackageName != NULL) {
-      outputFileName = (char *) calloc (1, len + 4);
+      outputFileName = (char *) calloc (sizeof (char), len + 4);
       strcpy (outputFileName, commandPackageName);
       outputFileName [len] = '.';
       outputFileName [len+1] = 's';
@@ -1494,7 +1494,7 @@ void checkHostCompatibility () {
 char * appendStrings (char * str1, char * str2, char * str3) {
   int len = strlen (str1) + strlen (str2) + strlen (str3);
   char * newStr, * to, * from ;
-  newStr = (char *) calloc (1, len+1);
+  newStr = (char *) calloc (sizeof (char), len+1);
   to = newStr;
   for (from=str1; *from != 0; to++, from++) {
     *to = *from;

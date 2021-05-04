@@ -604,7 +604,7 @@ void genMethOrFunction (MethOrFunction * methOrFunction) {
   if (methOrFunction->op == FUNCTION) {
     fun = (Function *) methOrFunction;
     if (fun->myProto == NULL) {
-      nameOfNamelessFunction = (char *) calloc (1,
+      nameOfNamelessFunction = (char *) calloc (sizeof (char),
                                     strlen (extractFilename (fun->tokn)) + 40);
       if (nameOfNamelessFunction == 0) {
         programLogicError ("Calloc failed in genMethOrFunction; out of memory perhaps???");
@@ -2580,7 +2580,7 @@ void genSwitchStmt (SwitchStmt * switchStmt) {
   } else if (((density > 0.5) || (range <= 300)) &&
              (within16Bits (lowValue)) &&
              (within16Bits (highValue))) {
-
+    
     IRComment ("SWITCH STATEMENT (using an indirect jump table)...");
     genLineNumber (switchStmt, "SW");
     IRComment ("  Evaluate the switch expression...");
@@ -2593,7 +2593,7 @@ void genSwitchStmt (SwitchStmt * switchStmt) {
     //     printf ("lowValue = %d\n", lowValue);
     //     printf ("highValue = %d\n", highValue);
     //     printf ("range = %d\n", range);
-    a = (char * *) calloc (4, range); 
+    a = (char * *) calloc (sizeof(char *), range); 
     if (a == NULL) {
       fatalError ("Calloc failed in genSwitchStmt; out of memory perhaps???");
     }
@@ -2631,7 +2631,7 @@ void genSwitchStmt (SwitchStmt * switchStmt) {
     tableName = newLabel ();
 
     // Create an array of labels of the right size...
-    a = (char * *) calloc (4, tableSize); 
+    a = (char * *) calloc (sizeof(char *), tableSize); 
     if (a == NULL) {
       fatalError ("Calloc failed in genSwitchStmt; out of memory perhaps???");
     }
@@ -2641,7 +2641,7 @@ void genSwitchStmt (SwitchStmt * switchStmt) {
     }
 
     // Create an array of values of the right size...
-    valueArray = (int *) calloc (4, tableSize); 
+    valueArray = (int *) calloc (sizeof (int), tableSize); 
     if (valueArray == NULL) {
       fatalError ("Calloc failed in genSwitchStmt; out of memory perhaps???");
     }
@@ -3920,7 +3920,7 @@ char * newLabel () {
 //
 char * newName (char * str) {
   static int next = 1;
-  char * p = (char *) calloc (1, strlen (str) + 12);
+  char * p = (char *) calloc (sizeof (char), strlen (str) + 12);
   if (p==0) {
     programLogicError ("Calloc failed in newName; out of memory perhaps???");
   }
@@ -3957,7 +3957,7 @@ char * newName (char * str) {
 //    xx_yy     zz         _P_xx_yy_zz         _P_xx__yy_zz
 //
 char * sanitizedPackageName (String * packageName) {
-  char * result = (char *) calloc (1, 2 * packageName->length + 5);
+  char * result = (char *) calloc (sizeof (char), 2 * packageName->length + 5);
   char * p = result;
   char * from = packageName->chars;
   int i;
@@ -3996,7 +3996,7 @@ char * sanitizedPackageName (String * packageName) {
 //        ...
 //
 char * newMethodName (char * sanitizedClassName, int i) {
-  char * p = (char *) calloc (1, strlen (sanitizedClassName) + 20);
+  char * p = (char *) calloc (sizeof (char), strlen (sanitizedClassName) + 20);
   if (p==0) {
     programLogicError ("Calloc failed in newName; out of memory perhaps???");
   }

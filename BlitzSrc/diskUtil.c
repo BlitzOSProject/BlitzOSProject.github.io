@@ -618,7 +618,7 @@ void addCommand () {
   }
 
   /* Allocate a chunk of memory big enough to hold all of the source file. */
-  memory = (char *) calloc (1, unixFileSizeInBytes);
+  memory = (char *) calloc (sizeof (char), unixFileSizeInBytes);
   if (memory == 0) {
     fatalError ("Unable to allocate enough memory to hold the entire source file");
   }
@@ -694,7 +694,7 @@ void extractCommand () {
   if (commandOptionV) printf ("The UNIX file \"%s\" has been opened successfully.\n", unixFileName);
 
   /* Allocate a chunk of memory big enough to hold all of the file. */
-  memory = (char *) calloc (1, ent->sizeInBytes);
+  memory = (char *) calloc (sizeof (char), ent->sizeInBytes);
   if (memory == 0) {
     fatalError ("Unable to allocate enough memory to hold the entire file");
   }
@@ -841,7 +841,7 @@ void writeCommand () {
   if (commandOptionV) printf ("The length of the source file is %d bytes.\n", unixFileLength);
 
   /* Allocate a chunk of memory big enough to hold all of the source file. */
-  memory = (char *) calloc (1, unixFileLength);
+  memory = (char *) calloc (sizeof (char), unixFileLength);
   if (memory == 0) {
     fatalError ("Unable to allocate enough memory to hold the entire source file");
   }
@@ -976,7 +976,7 @@ void writeString (char * str, int len) {
 */
 char * readString (int len) {
   int i;
-  char * str = (char *) calloc (1, len+1);
+  char * str = (char *) calloc (sizeof (char), len+1);
   char * next = str;
   while (len) {
     errno = 0;
