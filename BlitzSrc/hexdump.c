@@ -26,6 +26,11 @@
 
 #include <stdio.h>
 
+readline ();
+putlong (int);
+printline ();
+putbyt (int);
+
 int row [16];
 int size;
 
