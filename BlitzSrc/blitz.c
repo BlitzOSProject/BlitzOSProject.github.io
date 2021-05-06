@@ -35,6 +35,7 @@
 #include <math.h>
 #include <errno.h>
 #include <stdint.h>
+#include <unistd.h>
 
 
 /* SWAP_BYTES (int)  -->  int

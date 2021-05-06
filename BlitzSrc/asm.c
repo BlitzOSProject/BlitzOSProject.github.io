@@ -24,6 +24,7 @@
 #include <string.h>
 #include <float.h>
 #include <math.h>
+#include <ctype.h>
 
 
 /* SWAP_BYTES (int)  -->  int
