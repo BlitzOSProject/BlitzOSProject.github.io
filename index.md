@@ -38,6 +38,11 @@ The BLITZ System is a collection of software designed to support a university-le
  - **تاریخ انتشار:** ۷ اردیبهشت ۱۴۰۰
  - **مهلت تحویل**: دو هفته
 
+#### فاز پنجم پروژه
+ - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-five/persian-summary)
+ - **تاریخ انتشار:** ۳۱ اردیبهشت ۱۴۰۰
+ - **مهلت تحویل**: ۱۶ خرداد ۱۴۰۰
+
 </div>
 
 ## Documentation
