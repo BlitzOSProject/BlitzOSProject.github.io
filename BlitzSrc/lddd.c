@@ -907,7 +907,7 @@ void processCommandLine (int argc, char ** argv) {
       }
       p->filename = *argv;
       /* Open this .o file for reading. */
-      p->filePtr = fopen (p->filename, "r");
+      p->filePtr = fopen (p->filename, "rb");
       if (p->filePtr == NULL) {
         fprintf (stderr,
                  "BLITZ Linker Error: Input file \"%s\" could not be opened\n",
@@ -945,7 +945,7 @@ void processCommandLine (int argc, char ** argv) {
   }
 
   /* Open the output (a.out) file. */
-  outputFile = fopen (commandOutFileName, "wa");
+  outputFile = fopen (commandOutFileName, "wb");
   if (outputFile == NULL) {
     fprintf (stderr,
              "BLITZ Linker Error: Output file \"%s\" could not be opened\n",
@@ -1062,6 +1062,7 @@ int readInteger (FileInfo * file) {
   int i, numItemsRead;
   numItemsRead = fread (&i, 4, 1, file->filePtr);
   if (numItemsRead != 1) {
+    printf("%d", numItemsRead);
     printErrorAndExit (file, "Problem reading from object file");
   }
   return SWAP_BYTES (i);

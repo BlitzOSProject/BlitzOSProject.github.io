@@ -36,7 +36,9 @@
 #include <errno.h>
 #include <stdint.h>
 #include <unistd.h>
-
+#if defined(_WIN32) || defined(_WIN64)
+    #include <conio.h>   // Windows-specific header
+#endif
 
 /* SWAP_BYTES (int)  -->  int
 **
@@ -1166,7 +1168,7 @@ void processCommandLine (int argc, char ** argv) {
   }
 
   /* Open the a.out file. */
-  executableFile = fopen (executableFileName, "r");
+  executableFile = fopen (executableFileName, "rb");
   if (executableFile == NULL) {
     fprintf (stderr,
              "BLITZ Emulator Error: Input file \"%s\" could not be opened\n",
@@ -1190,7 +1192,7 @@ void processCommandLine (int argc, char ** argv) {
         exit (1);
       }
     }
-    termInputFile = fopen (termInputFileName, "r");
+    termInputFile = fopen (termInputFileName, "rb");
     if (termInputFile == NULL) {
       fprintf (stderr,
                "BLITZ Emulator Error: Input file \"%s\" could not be opened for reading\n",
@@ -2391,7 +2393,7 @@ void commandFormat () {
   }
 
   // Try to open the file as an existing file...
-  diskFile = fopen (diskFileName, "r");
+  diskFile = fopen (diskFileName, "rb");
   if (diskFile == NULL) {
     errno = 0;
     printf ("The file \"%s\" did not previously exist.  (It could not be opened for reading.)\n", diskFileName);
@@ -2476,7 +2478,7 @@ void commandFormat () {
     }
 
     // Open the file for updating...
-    diskFile = fopen (diskFileName, "r+");
+    diskFile = fopen (diskFileName, "rb+");
     if (diskFile == NULL) {
       printf ("The file could not be opened!\n");
       initializeDisk ();
@@ -8887,6 +8889,9 @@ char checkForInput (int waitForKeystroke) {
 ** the Unix function "select".  This function requires <fcntl.h>.
 */
 int characterAvailableOnStdin () {
+#if defined(_WIN32) || defined(_WIN64)
+    return _kbhit(); // Windows: Use _kbhit() to check if a key has been pressed
+#else	
   int numbits = 32;
   int rfd = 1;
   int wfd = 0;
@@ -8904,6 +8909,7 @@ int characterAvailableOnStdin () {
     fatalError ("Problems with Unix function select");
   }
   return retval;
+#endif
 }
 
 
@@ -8933,7 +8939,7 @@ void initializeDisk () {
   }
 
   /* Open the DISK file for updating... */
-  diskFile = fopen (diskFileName, "r+");
+  diskFile = fopen (diskFileName, "rb+");
   if (diskFile == NULL) {
     fprintf (stderr,
              "Error in DISK File: File \"%s\" could not be opened for updating.  Simulated disk I/O has been disabled!\n",
@@ -9258,7 +9264,7 @@ void setSimulationConstants () {
     defaultSimulationConstants ();
 
     // Try to open the ".blitzrc" file...
-    blitzrc = fopen (".blitzrc", "r");
+    blitzrc = fopen (".blitzrc", "rb");
     if (blitzrc != NULL) {
       // printf ("Reading simulation values from file \".blitzrc\"...\n");
 

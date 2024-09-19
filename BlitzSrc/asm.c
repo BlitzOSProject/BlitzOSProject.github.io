@@ -594,7 +594,7 @@ void processCommandLine (int argc, char ** argv) {
   if (commandInFileName == NULL) {
     inputFile = stdin;
   } else {
-    inputFile = fopen (commandInFileName, "r");
+    inputFile = fopen (commandInFileName, "rb");
     if (inputFile == NULL) {
       fprintf (stderr,
           "Input file \"%s\" could not be opened\n", commandInFileName);
@@ -633,7 +633,7 @@ void processCommandLine (int argc, char ** argv) {
   }
 
   /* Open the output (.o) file. */
-  outputFile = fopen (commandOutFileName, "wa");
+  outputFile = fopen (commandOutFileName, "wb");
   if (outputFile == NULL) {
     fprintf (stderr,
        "Output file \"%s\" could not be opened\n", commandOutFileName);
