@@ -233,7 +233,7 @@ void openDiskFile (int existing) {
 
   // Open the DISK file for updating...
   errno = 0;
-  diskFile = fopen (diskFileName, "r+");
+  diskFile = fopen (diskFileName, "rb+");
   if (errno) {
     perror ("Error on DISK file");
     fatalError ("The DISK file could not be opened for updating");
@@ -525,7 +525,7 @@ void addCommand () {
 
   // Open the UNIX file for reading...
   errno = 0;
-  unixFile = fopen (unixFileName, "r");
+  unixFile = fopen (unixFileName, "rb");
   if (errno) {
     perror ("Error on UNIX file");
     fatalError ("The UNIX file could not be opened for reading");
@@ -685,7 +685,7 @@ void extractCommand () {
 
   // Open the UNIX file for updating...
   errno = 0;
-  unixFile = fopen (unixFileName, "wa");
+  unixFile = fopen (unixFileName, "wb");
   if (errno) {
     perror ("Error on UNIX file");
     fatalError ("The UNIX file could not be opened for updating");
@@ -751,7 +751,7 @@ void writeCommand () {
 
   // Open the DISK file for updating...
   errno = 0;
-  diskFile = fopen (diskFileName, "r+");
+  diskFile = fopen (diskFileName, "rb+");
   if (errno) {
     perror ("Error on DISK file");
     fatalError ("The DISK file could not be opened for updating");
@@ -813,7 +813,7 @@ void writeCommand () {
 
   // Open the source file for updating...
   errno = 0;
-  unixFile = fopen (unixFileName, "r");
+  unixFile = fopen (unixFileName, "rb");
   if (errno) {
     perror ("Error on source file");
     fatalError ("The source file could not be opened for reading");

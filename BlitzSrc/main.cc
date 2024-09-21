@@ -1274,7 +1274,7 @@ void processCommandLine (int argc, char ** argv) {
   if (outputFileName == NULL) {
     outputFile = stdout;
   } else {
-    outputFile = fopen (outputFileName, "w");
+    outputFile = fopen (outputFileName, "wb");
     if (outputFile == NULL) {
       fprintf (stderr, "File \"%s\" could not be opened for writing\n", outputFileName);
       exit (1);

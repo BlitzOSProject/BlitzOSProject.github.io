@@ -86,11 +86,11 @@ char * initScanner (char * filename) {
   } else {
     currentInputFileName = filename;
     // Open the input file.
-    inputFile = fopen (currentInputFileName, "r");
+    inputFile = fopen (currentInputFileName, "rb");
     // If that fails, prepend the directory path prefix and try again.
     if ((inputFile == NULL) && (commandDirectoryName != NULL)) {
       currentInputFileName = appendStrings (commandDirectoryName, filename, "");
-      inputFile = fopen (currentInputFileName, "r");
+      inputFile = fopen (currentInputFileName, "rb");
     }
     // If that fails, then print an error, set things to the EOF state, and return.
     if (inputFile == NULL) {
