@@ -299,7 +299,7 @@ The **Echo** program is also a stand-alone program, relying on no library functi
 The KPL Programming Language
 ----------------------------
 
-In this course, you will write code in the “KPL” programming language. Begin studying the document titled [An Overview of KPL: A Kernel Programming Language]({{ site.url }}/BlitzDoc/KPLOverview.htm).
+In this course, you will write code in the “KPL” programming language. Begin studying the document titled [An Overview of KPL: A Kernel Programming Language](https://github.com/BlitzOSProject/BlitzOSProject.github.io/blob/1403/docs/kpl.md).
 
 ### Step 7: Compile and Execute a KPL Program called “HelloWorld”
 
