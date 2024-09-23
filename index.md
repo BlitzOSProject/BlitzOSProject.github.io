@@ -14,35 +14,13 @@ The BLITZ System is a collection of software designed to support a university-le
 <div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.2em" markdown="1">
 
 
-### دانشگاه صنعتی شریف - بهار ۱۴۰۰ - سیستم عامل - دکتر فروغمند
-##### هر فاز از پروژه ۱ نمره دارد.
+### دانشگاه صنعتی شریف - پاییز ۱۴۰۳ - سیستم عامل
 #### فاز نخست پروژه
  - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-one/persian-summary)
- - **تاریخ انتشار:** ۵ اسفند ۱۳۹۹
- - **ویدئو‌ی کلاس حل تمرین:** [اینجا](https://aparat.com/v/gy8MD)
+ - **تاریخ انتشار:** ۲ مهر ۱۴۰۳
  - **مهلت تحویل**: یک هفته
 
-#### فاز دوم پروژه
- - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-two/persian-summary)
- - **تاریخ انتشار:** ۱۸ اسفند ۱۳۹۹
- - **ویدئو‌ی کلاس حل تمرین:** [اینجا](https://www.aparat.com/v/Z7OWG)
- - **مهلت تحویل**: سه هفته
-
-#### فاز سوم پروژه
- - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-three/persian-summary)
- - **تاریخ انتشار:** ۱۵ فروردین ۱۴۰۰
- - **مهلت تحویل**: سه هفته
-
-#### فاز چهارم پروژه
- - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-four/persian-summary)
- - **تاریخ انتشار:** ۷ اردیبهشت ۱۴۰۰
- - **مهلت تحویل**: دو هفته
-
-#### فاز پنجم پروژه
- - **توضیحات:** [اینجا](courses/sharif-1400-02/phase-five/persian-summary)
- - **تاریخ انتشار:** ۳۱ اردیبهشت ۱۴۰۰
- - **مهلت تحویل**: ۱۶ خرداد ۱۴۰۰
-
+###
 </div>
 
 ## Documentation
@@ -103,35 +81,26 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 
 ## The Operating System Project
 
-### Project 1: Introduction to the BLITZ Tools
+### Project 1: Introduction to the BLITZ ( and its tools )
 [document](project/1) - [html](OSProject/p1/proj1.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p1) - [<s>old pdf</s>](OSProject/p1/proj1.pdf)
-### Project 2: Threads and Interprocess Communication
-document - [html](OSProject/p2/proj2.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p2) - [<s>old pdf</s>](OSProject/p2/proj2.pdf)
-### Project 3: Barbers and Gamblers
-document - [html](OSProject/p3/proj3.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p3) - [<s>old pdf</s>](OSProject/p3/proj3.pdf)
-### Project 4: Kernel Resource Management
-document - [html](OSProject/p4/proj4.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p4) - [<s>old pdf</s>](OSProject/p4/proj4.pdf)
-### Project 5: User-Level Processes
-document - [html](OSProject/p5/proj5.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p5) - [<s>old pdf</s>](OSProject/p5/proj5.pdf)
-### Project 6: Multiprogramming with Fork
-document - [html](OSProject/p6/proj6.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p6) - [<s>old pdf</s>](OSProject/p6/proj6.pdf)
-### Project 7: File-Related Syscalls
-document - [html](OSProject/p7/proj7.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p7) - [<s>old pdf</s>](OSProject/p7/proj7.pdf)
-### Project 8: The Serial I/O Device Driver
-document - [html](OSProject/p8/proj8.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p8) - [<s>old pdf</s>](OSProject/p8/proj8.pdf)
 
 ## The BLITZ Tools
-
+### Executables for Linux Windows (64-bit)
+[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Windows)
 ### Executables for Sun / Solaris
-[Blitz/BlitzBin/Sun](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/Sun)
+[Blitz/BlitzBin/Sun](./BlitzBin/Sun)
+### Executables for Linux Ubuntu (32-bit)
+[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Ubuntu32)
 ### Executables for Linux Ubuntu (64-bit)
-[Blitz/BlitzBin/Ubuntu64](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/Ubuntu64)
+[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Ubuntu64)
 ### Executables for Mac OS X (Intel)
-[Blitz/BlitzBin/MacIntel](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/MacIntel)
+[Blitz/BlitzBin/MacIntel](./BlitzBin/MacIntel)
 ### Executables for Mac OS X (PPC)
-[Blitz/BlitzBin/MacPPC](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzBin/MacPPC)
+[Blitz/BlitzBin/MacPPC](./BlitzBin/MacPPC)
+### Executables for Mac OS X (Apple Silicon)
+[Blitz/BlitzBin/MacPPC](./BlitzBin/MacArm)
 ### Source Code
-[Blitz/BlitzSrc](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/BlitzSrc)
+[Blitz/BlitzSrc](./BlitzSrc)
 
 ## Information for Instructors
 
