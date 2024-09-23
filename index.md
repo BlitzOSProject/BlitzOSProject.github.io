@@ -86,7 +86,7 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 
 ## The BLITZ Tools
 ### Executables for Linux Windows (64-bit)
-[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Windows)
+[Blitz/BlitzBin/Windows](./BlitzBin/Windows)
 ### Executables for Sun / Solaris
 [Blitz/BlitzBin/Sun](./BlitzBin/Sun)
 ### Executables for Linux Ubuntu (32-bit)
@@ -98,7 +98,7 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 ### Executables for Mac OS X (PPC)
 [Blitz/BlitzBin/MacPPC](./BlitzBin/MacPPC)
 ### Executables for Mac OS X (Apple Silicon)
-[Blitz/BlitzBin/MacPPC](./BlitzBin/MacArm)
+[Blitz/BlitzBin/MacArm](./BlitzBin/MacArm)
 ### Source Code
 [Blitz/BlitzSrc](./BlitzSrc)
 
