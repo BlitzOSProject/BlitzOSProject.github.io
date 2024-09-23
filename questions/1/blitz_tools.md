@@ -55,14 +55,14 @@ These tools are listed more-or-less in the order they would be used. You will pr
 
 ### Organization of the Course Material
 
-You can download all resources use [this link](https://github.com/BlitzOSProject/BlitzOSProject.github.io/archive/main.zip), or use git clone:
+You can download all resources use [this link](https://github.com/BlitzOSProject/BlitzOSProject.github.io/archive/1403.zip), or use git clone:
 ```
 git clone https://github.com/BlitzOSProject/BlitzOSProject.github.io.git
 ```
 
 ### Step 3: Modify Your Search Path and Verify the Tools are Working
 
-Blitz tools are ready to use now. But you need to add them to your system search path in order to execute them in your terminal:
+Check out BlitzBin to find appropriate tools for you system. You can download them or you can clone the whole project to use them. Blitz tools are ready to use now but you need to add them to your system search path in order to execute them in your terminal:
 
 #### For Windows
 To add a folder containing .exe files to the PATH environment variable in Windows, follow these steps:
