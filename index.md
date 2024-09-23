@@ -85,21 +85,21 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 
 ## The BLITZ Tools
 ### Executables for Linux Windows (64-bit)
-[Blitz/BlitzBin/Windows](./BlitzBin/Windows)
+[Blitz/BlitzBin/Windows](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Windows)
 ### Executables for Sun / Solaris
-[Blitz/BlitzBin/Sun](./BlitzBin/Sun)
+[Blitz/BlitzBin/Sun](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Sun)
 ### Executables for Linux Ubuntu (32-bit)
-[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Ubuntu32)
+[Blitz/BlitzBin/Ubuntu64](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Ubuntu32)
 ### Executables for Linux Ubuntu (64-bit)
-[Blitz/BlitzBin/Ubuntu64](./BlitzBin/Ubuntu64)
+[Blitz/BlitzBin/Ubuntu64](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Ubuntu64)
 ### Executables for Mac OS X (Intel)
-[Blitz/BlitzBin/MacIntel](./BlitzBin/MacIntel)
+[Blitz/BlitzBin/MacIntel](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/MacIntel)
 ### Executables for Mac OS X (PPC)
-[Blitz/BlitzBin/MacPPC](./BlitzBin/MacPPC)
+[Blitz/BlitzBin/MacPPC](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/MacPPC)
 ### Executables for Mac OS X (Apple Silicon)
-[Blitz/BlitzBin/MacArm](./BlitzBin/MacArm)
+[Blitz/BlitzBin/MacArm](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/MacArm)
 ### Source Code
-[Blitz/BlitzSrc](./BlitzSrc)
+[Blitz/BlitzSrc](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzSrc)
 
 ## Information for Instructors
 
