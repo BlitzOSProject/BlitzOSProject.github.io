@@ -1,7 +1,5 @@
 # Programming Project 1: Introduction to the BLITZ Tools
 
-**Duration:** Two Weeks
-
 ### Overview and Goal
 
 In this course you will be creating an operating system kernel. You’ll be using the BLITZ software tools, which were written for this task. The goals of this project are to make sure that you can use the BLITZ tools and to help you gain familiarity with them.
