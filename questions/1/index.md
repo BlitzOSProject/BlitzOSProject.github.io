@@ -5,6 +5,6 @@
 جهت راه‌اندازی [این](./blitz_tools.md) را بخوانید و مراحل آن را انجام دهید.
 ### تحویلی ها
 
-- ده‌دهی به دو‌دویی [](./DecimalToBinary/)
-- لوزی [](./DecimalToBinary/)
-- مثلث [](./DecimalToBinary/)
+- [ده‌دهی به دو‌دویی](./DecimalToBinary/question_content.md)
+- [لوزی](./Diamond/question_content.md)
+- [مثلث](./Triangle/question_content.md)
