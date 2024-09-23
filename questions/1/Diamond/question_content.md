@@ -6,10 +6,12 @@
 
 برای گرفتن یک عدد به عنوان ورودی از InputInt استفاده کنید. مثلا:
 <div dir="ltr">
+  
 ```
 n = InputInt()
 ```
 </div>
+
 </div>
 
 ### Example 1:
