@@ -20,7 +20,6 @@ The BLITZ System is a collection of software designed to support a university-le
  - **تاریخ انتشار:** ۲ مهر ۱۴۰۳
  - **مهلت تحویل**: دو هفته
 
-###
 </div>
 
 ## Documentation
