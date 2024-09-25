@@ -29,7 +29,7 @@ n = InputInt()
 
 **Output:**
 
-`Yes`
+```Yes```
 
 ### Example 2:
 
@@ -42,4 +42,4 @@ n = InputInt()
 ```
 **Output:**
 
-`No`
+```No```

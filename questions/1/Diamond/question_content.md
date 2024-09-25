@@ -1,3 +1,5 @@
+<style> @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap'); </style>
+
 # Diamond
 
 <div dir="rtl">
