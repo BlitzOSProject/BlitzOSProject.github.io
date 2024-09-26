@@ -8,7 +8,7 @@ In this course you will be creating an operating system kernel. You’ll be usin
 
 Read the first document ([An Overview of the BLITZ System](/docs/overview)) before proceeding to next step.
 
-### Step 2: Choose Your Host Platform
+### Step 2: Choose Your Host Platform And Download the tools
 
 You will develop your operating system code on a "host" computer and you will be running the BLITZ tools on that host computer. You should decide now which host computer you will be using.
 
@@ -19,6 +19,8 @@ The BLITZ tools run on the follow host platforms:
  - Windows
 
 The source code for all the BLITZ tools is available, but you should not need to look at it. Nevertheless, it is available for anyone who is interested.
+
+Once you have choosen your platform head [here](https://blitzosproject.github.io/#the-blitz-tools) to **Download** the tools.
 
 ### The BLITZ Tools
 
