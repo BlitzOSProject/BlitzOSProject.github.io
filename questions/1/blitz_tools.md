@@ -181,19 +181,19 @@ This should produce no errors and should create a file called **Hello.o**.
 The **Hello.s** program is completely stand-alone. In other words, it does not need any library functions and does not rely on any operating system. Nevertheless, it must be linked to produce an executable (“a.out” file). The linking is done with the tool called “lddd”. (In UNIX, the linker is called “ld”.)
 
 ```
-lddd Hello.o –o Hello
+lddd Hello.o -o Hello
 ```
 Normally the executable is called **a.out**, but the `-o Hello` option will name the executable **Hello**.
 
 Not for this one but remember to link kpl projects with libraries Runtime.o and System.o like this:
 ```
-lddd YourProject.o Runtime.o System.o –o YourProject
+lddd YourProject.o Runtime.o System.o -o YourProject
 ```
 
 
 Finally, execute this program, using the BLITZ virtual machine. (Sometimes the BLITZ virtual machine is referred to as the "emulator") Type:
 ```
-blitz –g Hello
+blitz -g Hello
 ```
 
 The `-g` option is the "auto-go" option and it means begin execution immediately. You should see:
@@ -255,7 +255,7 @@ Type in the following commands:
 ```
 asm Echo.s
 
-lddd Echo.o –o Echo
+lddd Echo.o -o Echo
 blitz Echo
 ```
 
@@ -334,7 +334,7 @@ KPL programs are often linked with routines coded in assembly language. Right no
 
 Now execute this program. Type:
 ```
-blitz –g HelloWorld
+blitz -g HelloWorld
 ```
 
 You should see the “Hello, world...” message. What happens if you type “g” at the prompt, to resume instruction execution?
