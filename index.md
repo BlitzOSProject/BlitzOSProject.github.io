@@ -84,7 +84,7 @@ This document describes the workings of a kernel thread scheduler using, as a sp
 [document](project/1) - [html](OSProject/p1/proj1.htm) - [files](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/main/OSProject/p1) - [<s>old pdf</s>](OSProject/p1/proj1.pdf)
 
 ## The BLITZ Tools
-### Executables for Linux Windows (64-bit)
+### Executables for Windows (64-bit)
 [Blitz/BlitzBin/Windows](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Windows)
 ### Executables for Sun / Solaris
 [Blitz/BlitzBin/Sun](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/BlitzBin/Sun)
