@@ -11,6 +11,7 @@
 
 فایل توضیحات فاز دوم پروژه را میتوانید از [اینجا](/OSProject/p2/proj2.pdf) مشاهده کنید.
 
+فایل های فاز دوم پروژه را میتوانید از [اینجا](https://github.com/BlitzOSProject/BlitzOSProject.github.io/tree/1403/Assignments/p2) دانلود‍ کنید.
 
 #### خواسته‌ها و خروجی
 
@@ -38,11 +39,11 @@ PUT YOUR NAME HERE
 در ابتدای کدها بنویسید.
 
 خروجی مطلوب برای ۳ مرحله‌ی ۵ و ۶ و ۷ به ترتیب در 
-[اینجا](/OSProject/p2/DesiredOutput1.pdf)
+[اینجا](/DesiredOutput1.pdf)
 ،
-[اینجا](/OSProject/p2/DesiredOutput2.pdf)
+[اینجا](/DesiredOutput2.pdf)
 و
-[اینجا](/OSProject/p2/DesiredOutput3.pdf)
+[اینجا](/DesiredOutput3.pdf)
 قرار گرفته است.
 
 همچنین، اگر هنوز توضیحات زبان
