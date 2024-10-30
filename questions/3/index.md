@@ -34,9 +34,9 @@ PUT YOUR NAME HERE
 در ابتدای کدها بنویسید.
 
 خروجی مطلوب برای قسمت اول و دوم را به ترتیب در 
-[اینجا](/DesiredOutput1.pdf)
+[اینجا](./DesiredOutput1.pdf)
 و
-[اینجا](/DesiredOutput2.pdf)
+[اینجا](./DesiredOutput2.pdf)
 قرار گرفته است.
 
 همچنین، اگر هنوز توضیحات زبان
