@@ -28,7 +28,7 @@ The BLITZ System is a collection of software designed to support a university-le
 ### فاز سوم پروژه
  - **توضیحات:** [اینجا](questions/3/index.md)
  - **تاریخ انتشار:** ۱۵ آبان ۱۴۰۳
- - **مهلت تحویل:** تا پایان ۳۰ آبان ۱۴۰۳
+ - **مهلت تحویل:** تا پایان ۲ آذر ۱۴۰۳
 </div>
 
 ## Documentation
