@@ -5,7 +5,7 @@
 <div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.2em" markdown="1">
 
 ## تمرین سری سوم درس سیستم‌عامل
-### مهلت ارسال: ۲ آذر
+### مهلت ارسال: 5 آذر
 
 
 
