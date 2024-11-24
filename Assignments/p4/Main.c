@@ -390,7 +390,6 @@ code Main
   function TestFrameManager (myID: int)
      var i, j, newData, sz: int
          pcb: ptr to ProcessControlBlock
-      -- printIntVar ("Thread started", myID)
       printChar ('+')
       printInt (myID)
       pcb = processManager.GetANewProcess ()
