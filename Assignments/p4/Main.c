@@ -1,6 +1,6 @@
 code Main
 
-  -- This is code for testing the ThreadManage, ProcessManager and FrameManager
+  -- This is code for testing the ThreadManager, ProcessManager and FrameManager
 
 -----------------------------  Main  ---------------------------------
 
@@ -207,8 +207,10 @@ code Main
   function TestThreadManager (myID: int)
       var i, j, e: int
           th: ptr to Thread
-      -- printIntVar ("Thread started", myID)
+      printChar('+')
+      printInt(myID)
       for i = 1 to NUMBER_ITERATIONS
+        printChar ('.')
         printInt (myID)
         e = GetUniqueNumber (1)
         th = threadManager.GetANewThread ()
@@ -219,7 +221,8 @@ code Main
         if e != th.regs[0]
           FatalError ("Concurrency control failure (2)")
         endIf
-        printChar ('.')
+        printChar (',')
+        printInt (myID)
         threadManager.FreeThread (th)
         for j = 1 to WAIT_TIME-i
           currentThread.Yield ()
@@ -288,8 +291,10 @@ code Main
   function TestProcessManager (myID: int)
       var i, j, e: int
           pcb: ptr to ProcessControlBlock
-      -- printIntVar ("Thread started", myID)
+      printChar ('+')
+      printInt (myID)
       for i = 1 to NUMBER_ITERATIONS
+        printChar ('.')
         printInt (myID)
         e = GetUniqueNumber (1)
         pcb = processManager.GetANewProcess ()
@@ -300,7 +305,8 @@ code Main
         if e != pcb.exitStatus
           FatalError ("Concurrency control failure (2)")
         endIf
-        printChar ('.')
+        printChar (',')
+        printInt (myID)
         processManager.FreeProcess (pcb)
         for j = 1 to WAIT_TIME-i
           currentThread.Yield ()
@@ -319,17 +325,17 @@ code Main
 -- Each TestFrameManager thread signals it and the main thread will wait
 -- for NUM-THREAD times, i.e., until all threads have finished.
 -- We also keep track of how many times each frame is used and print this
--- data (as a histogram) after all the threads have finished.
+-- data (as a frameCount) after all the threads have finished.
 --
   const WAIT_TIME2 = 5
         NUMBER_ITERATIONS_2 = 5
 
   var allDone2: Semaphore = new Semaphore
-      histogram: array [NUMBER_OF_PHYSICAL_PAGE_FRAMES] of int =
+      frameCount: array [NUMBER_OF_PHYSICAL_PAGE_FRAMES] of int =
                     new array of int {NUMBER_OF_PHYSICAL_PAGE_FRAMES of 0 }
 
   function RunFrameManagerTests ()
-      var i,j : int
+      var i: int
           th: ptr to Thread
 
       allDone2.Init (0)
@@ -349,14 +355,11 @@ code Main
         allDone2.Down ()
       endFor
 
-      print ("\n\nHere is a histogram showing how many times each frame was used:\n")
+      print ("\n\nThe following is showing how many times each frame was used:\n")
       for i = 0 to NUMBER_OF_PHYSICAL_PAGE_FRAMES-1
-        print ("  ")
         printInt (i)
-        print (":  ")
-        for j = 0 to histogram[i]
-          printChar ('*')
-        endFor
+        print (": ")
+        printInt (frameCount[i])
         nl ()
       endFor
 
@@ -388,9 +391,12 @@ code Main
      var i, j, newData, sz: int
          pcb: ptr to ProcessControlBlock
       -- printIntVar ("Thread started", myID)
+      printChar ('+')
+      printInt (myID)
       pcb = processManager.GetANewProcess ()
       for i = 1 to NUMBER_ITERATIONS_2
         for sz = 1 to MAX_PAGES_PER_VIRT_SPACE-1
+          printChar ('.')
           printInt (myID)
           newData = GetUniqueNumber (sz)
           frameManager.GetNewFrames (&pcb.addrSpace, sz)
@@ -398,7 +404,8 @@ code Main
           for j = 1 to WAIT_TIME+i
             currentThread.Yield ()
           endFor
-          printChar ('.')
+          printChar (',')
+          printInt (myID)
           CheckAddrSpace2 (&pcb.addrSpace, sz, newData)
           frameManager. ReturnAllFrames (&pcb.addrSpace)
           for j = 1 to WAIT_TIME-i
@@ -430,7 +437,7 @@ code Main
            frameAddr % PAGE_SIZE != 0
           FatalError ("Bad frame number in some addr space")
         endIf
-        histogram[frameNumber] = histogram[frameNumber] + 1
+        frameCount[frameNumber] = frameCount[frameNumber] + 1
         if addrSpace.ExtractUndefinedBits (i) != 0 ||
            addrSpace.IsDirty (i) ||
            addrSpace.IsReferenced (i) ||
