@@ -44,3 +44,6 @@ Main.o: Main.s
 
 os: Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o
 	lddd Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o -o os
+
+clean:
+	rm -f os *.o BitMap.s Kernel.s List.s Main.s System.s
