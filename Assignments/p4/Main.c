@@ -355,7 +355,7 @@ code Main
         allDone2.Down ()
       endFor
 
-      print ("\n\nThe following is showing how many times each frame was used:\n")
+      print ("\n\nThe following shows how many times each frame was used:\n")
       for i = 0 to NUMBER_OF_PHYSICAL_PAGE_FRAMES-1
         printInt (i)
         print (": ")
