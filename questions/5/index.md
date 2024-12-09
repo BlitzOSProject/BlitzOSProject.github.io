@@ -36,7 +36,7 @@
 
 و همچنین در صورت داشتن هرگونه سوال از فاز دوم پروژه میتوانید سوالات خود را در گروه پرسیده و یا به ایدی تگرام دستیار های این فاز مراجعه کنید:
 - آقای صفایی ([@amirsalarsafaei](https://telegram.me/amirsalarsafaei)) 
-- آقای انصاری([@senaxor](https://telegram.me/senaxor)) 
+- آقای انصاری ([@senaxor](https://telegram.me/senaxor)) 
 
 
 ![Tuxes](https://turnoff.us/image/en/forked.png)
