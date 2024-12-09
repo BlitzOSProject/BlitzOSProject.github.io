@@ -1,8 +1,16 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+</style>
+
+<div dir="rtl" style="font-family: 'Lateef', cursive;font-size:1.2em;word-break: break-word; overflow-wrap: break-word;" markdown="1">
+
 ### فاز ۵
 ## اهداف فاز
 در این فاز قصد داریم با تفاوت های بین `kernel space` و `user space`، نحوه اجرا شدن `kernel call` و مقدمات کار با فایل و دیسک در `Blitz` آشنا شویم.
 
-طبق مستند مذکور `FileStuff.h` و `FileStuff.c` را به پروژه‌اتان اضافه کنید. با اینکار امکان نوشتن و خواندن از دیسک و مدیریت فایل هارا بدست می‌آورید.
+[مستند توضیحات کامل تسک‌ها و سوالات](./proj5.pdf)
+
+طبق مستند مذکور `fileStuff.h` و `fileStuff.c` را به پروژه‌اتان اضافه کنید. با اینکار امکان نوشتن و خواندن از دیسک و مدیریت فایل هارا بدست می‌آورید.
 > این کد‌ و اینترفیس‌ها به طور کامل پیاده‌سازی شده‌اند و نیازی به تغییر در آن ها نیست.
 
 ### Task 1
@@ -22,4 +30,5 @@
 ## تحویلی ها
 تغییرات شما باید در فایل های kernel.h و kernel.c باشد. این دو فایل و هر فایل دیگری تغییر دادید را تحویل دهید.
 
-
+![Tuxes](https://turnoff.us/image/en/forked.png)
+</div>
