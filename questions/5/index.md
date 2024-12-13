@@ -15,16 +15,16 @@
 
 ## تسک ها
 
-### Task 1
+### Task 1 (Shutdown Syscall)
 این بخش جهت آشنایی اولیه می‌باشد.
  
 
-### Task 2
+### Task 2 (Output all syscalls' arguments)
 برای این بخش به کد‌های `Kernel.h` رجوع کنید. همچنین حواستان باشد که تمام مقادیر ورودی عددی نیستند، بعضی پوینتری به رشته در `user space` هستند.
 
 
 
-### Task 3
+### Task 3 (Exec Syscall)
 
 در این بخش، دقت کنید که پیاده‌سازی SystemCall ‍‍`Exec` کافی می‌باشد.
 > در انتهای pdf، اشاره به LoadExcutable در OpenFile شده است. حتما مطالعه کنید.
