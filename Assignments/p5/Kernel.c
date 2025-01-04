@@ -1,6 +1,6 @@
 code Kernel
 
-  -- <Ahmed Rosanally>
+  -- <>
 
 -----------------------------  InitializeScheduler  ---------------------------------
 
